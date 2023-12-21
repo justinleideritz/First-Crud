@@ -117,7 +117,7 @@
 
         echo "<br>";
 
-        $sql = "SELECT AVG(minuten_te_laat) AS average_value FROM crud";
+        $sql = "SELECT round(AVG(minuten_te_laat)) AS average_value FROM crud";
         try {
             $stmt = $conn->query($sql);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
