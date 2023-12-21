@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 5px;
+            margin: 0;
             padding: 0;
             background-color: #f5f5f5;
         }
@@ -29,7 +29,20 @@
         tbody tr:hover {
             background-color: #e2e2e2;
         }
-        a{
+        #verwijder {
+            display: inline-block;
+            text-decoration: none;
+            padding: 8px 12px;
+            background-color: red;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        #verwijder:hover {
+            background-color: #C72704;
+        }
+        #update, #form{
             display: inline-block;
             text-decoration: none;
             padding: 8px 12px;
@@ -39,29 +52,12 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-        a:hover {
+        #update:hover, #form:hover {
             background-color: #2980b9;
         }
-        a[href='delete.php'] {
-            background-color: red;
+        .statistieken {
+            text-align: center;
         }
-            button[name='delete_student'] {
-            display: inline-block;
-            text-decoration: none;
-            padding: 8px 12px;
-            background-color: #e74c3c;
-            color: #fff;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-    }
-    
-    button[name='delete_student']:hover {
-        background-color: #c0392b;
-    }
-    .statistieken {
-        text-align: center;
-    }
     </style>
 </head>
 <body>
@@ -82,18 +78,14 @@
             echo "<td>" .$rij["klas"]. "</td>";
             echo "<td>" .$rij["minuten_te_laat"]. "</td>";
             echo "<td>" .$rij["reden_te_laat"]. "</td>";
-            echo "<td>
-            <form action='delete.php' method='POST' onsubmit='return confirmDelete();'>
-                <button type='submit' name='delete_student' value='".$rij['id']."'>Verwijder</button>
-            </form>
-            </td>";
-            echo "<td><a href='update.php?id=".$rij['id']."'</a>Update</td>";
+            echo "<td><a id='verwijder' href='verwijder.php?id=".$rij['id']."'</a>Verwijder</td>";
+            echo "<td><a id='update' href='update.php?id=".$rij['id']."'</a>Update</td>";
             echo "</tr>";
         }
         echo "</tbody>";
         echo "</table>";
         echo "<br>";
-        echo '<a href="form.php">Weer eentje te laat</a>';
+        echo '<a id="form" href="form.php">Weer eentje te laat</a>';
         echo "<br>";
         echo "<br>";
         echo "<br>";
