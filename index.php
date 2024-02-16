@@ -78,7 +78,7 @@
             echo "<td>" .$rij["klas"]. "</td>";
             echo "<td>" .$rij["minuten_te_laat"]. "</td>";
             echo "<td>" .$rij["reden_te_laat"]. "</td>";
-            echo "<td><a id='verwijder' href='verwijder.php?id=".$rij['id']."'</a>Verwijder</td>";
+            echo "<td><a id='verwijder' href='delete.php?id=".$rij['id']."'</a>Verwijder</td>";
             echo "<td><a id='update' href='update.php?id=".$rij['id']."'</a>Update</td>";
             echo "</tr>";
         }
