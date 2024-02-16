@@ -67,7 +67,7 @@
         echo "<table>";
         echo "<thead>";
         echo "<tr>";
-        echo "<th>Id</th> <th>Naam student</th> <th>Klas</th> <th>Minuten te laat</th> <th>Reden te laat</th> <th>Verwijder</th> <th>Update</th>";
+        echo "<th>ID</th> <th>Naam student</th> <th>Klas</th> <th>Minuten te laat</th> <th>Reden te laat</th> <th>Verwijder</th> <th>Update</th>";
         echo "</tr>";
         echo "</thead>";
         echo "<tbody>";
