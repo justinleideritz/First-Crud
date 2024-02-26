@@ -1,7 +1,7 @@
 <?php
 require("database-con.php");
 
-if(isset($_GET['updateStudent'])) {
+if (isset($_GET['updateStudent'])) {
     $studentId = $_GET['studentId'];
     $studentName = $_GET['naamStudent'];
     $klas = $_GET['klas'];
@@ -22,4 +22,3 @@ if(isset($_GET['updateStudent'])) {
         echo $e->getMessage();
     }
 }
-?>
